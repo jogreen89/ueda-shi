@@ -1,10 +1,18 @@
-class Main {
+import java.util.Scanner;
 
+class Main {
     public static void main(String args[]) {
-        Numbers n = new Numbers(10, 20);
-        System.out.println(n.getX());
-        System.out.println(n.getY());
-        
-        System.out.println("Hello, World");
+        Scanner scan = new Scanner(System.in);
+
+        System.out.println("This program simulates Binary Search on an array.");
+        System.out.print("Please enter the size of the array: ");
+        int n = scan.nextInt();
+
+        // Create array of random numbers of size: n
+        Numbers arr = new Numbers(n);
+        System.out.println("The size of array is "+
+        Integer.toString(arr.getSize()));
+
+        return;
     }
 }

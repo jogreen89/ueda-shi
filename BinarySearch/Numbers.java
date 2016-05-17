@@ -1,21 +1,23 @@
 class Numbers {
-    private int x = 0;
-    private int y = 0;
+    private int size = 0;
+    private int[] arr;
 
     Numbers() {
-        x = 0;
-        y = 0;
+        size = 0;
+        arr = new int[size];
     }
-    Numbers(int a, int b) {
-        x = a;
-        y = b;
-    }
-
-    public int getX() {
-        return x;
+    Numbers(int size) {
+        this.size = size;
+        arr = new int[size];
+        for (int i = 0; i < size; i++)
+            arr[i] = i;
     }
 
-    public int getY() {
-        return y;
+    public int getSize() {
+        return size;
+    }
+
+    public int getArray(int index) {
+        return arr[index];
     }
 }

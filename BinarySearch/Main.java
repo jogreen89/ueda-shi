@@ -10,8 +10,6 @@ class Main {
 
         // Create array of random numbers of size: n
         Numbers arr = new Numbers(n);
-        System.out.println("The size of array is "+
-        Integer.toString(arr.getSize()));
 
         return;
     }

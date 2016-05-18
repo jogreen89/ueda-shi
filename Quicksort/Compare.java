@@ -5,5 +5,5 @@
 // Kernighan and Pike.
 // 2016 (c) zubernetes
 public interface Compare {
-    int compare(Object o1, Object o2);
+    int compare(Object x, Object y);
 }

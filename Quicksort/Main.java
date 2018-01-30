@@ -1,12 +1,16 @@
+import java.util.Random;
+
 class Main {
 
     static Random rgen = new Random();
 
-    public static void main(String[] args) {
+    public static void main(String[] args)
+    {
         System.out.println("Hello, World");
     }
 
-    public static void sort(Object[] v, int left, int right, Compare cmp) {
+    public static void sort(Object[] v, int left, int right, Compare cmp)
+    {
         int i, last;
 
         if (left >= right)  // nothing to do
@@ -21,10 +25,11 @@ class Main {
 
         swap(v, left, last);
         sort(v, left, last - 1, cmp);
-        soft(v, last + 1, right, cmp);
+        sort(v, last + 1, right, cmp);
     }
 
-    public static void swap(Object[] v, int i, int j) {
+    public static void swap(Object[] v, int i, int j)
+    {
         Object temp;
 
         temp = v[i];
@@ -32,7 +37,8 @@ class Main {
         v[j] = temp;
     }
 
-    public static int rand(int left, int right) {
+    public static int rand(int left, int right)
+    {
         return left + Math.abs(rgen.nextInt()) % (right - left + 1);
     }
 }
